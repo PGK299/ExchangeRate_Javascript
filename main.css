@@ -6,7 +6,9 @@
 }
 
 body {
-  background-color: #f5f3f3;
+  background-color: #dedede;
+}
+.global-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +38,7 @@ body {
   justify-content: space-between;
 }
 .currency select {
+  color: rgb(89, 89, 89);
   padding: 10px 20px;
   border: 1px solid #dedede;
   font-size: 16px;
@@ -43,6 +46,7 @@ body {
   appearance: none;
 }
 .currency input {
+  color: rgb(89, 89, 89);
   border: 0;
   background: transparent;
   font-size: 30px;
@@ -54,6 +58,7 @@ body {
   justify-content: space-between;
 }
 .rate {
+  color: #1ba845;
   font-size: 20px;
   padding: 0px 10px;
 }
@@ -61,4 +66,40 @@ body {
 .input:focus,
 button:focus {
   outline: 0;
+}
+
+@media (max-width: 768px) {
+  .global-container {
+    padding: 15px;
+    height: auto;
+  }
+
+  .currency {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .currency select,
+  .currency input {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .swap-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 70%;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .rate {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 0;
+  }
 }
